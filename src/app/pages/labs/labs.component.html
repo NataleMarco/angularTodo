@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Soy el eze y programo en html (?</h1>
+  <h2>{{welcome}}</h2>
+  <p>
+    total: {{tasks().length}}
+  </p>
+  <li *ngFor="let task of tasks(); index as i">
+    {{i+1}} {{task}}
+  </li>
+  <hr />
+  <h2>{{'Hola'.repeat(4)}}</h2>
+  <p>la suma de 3 + 3 es {{3 + 3 }}</p>
+  <p>My name is {{name()}} and i'm {{person.age}} years old</p>
+  <hr />
+  <img [src]="person.avatar" alt="">
+  <p>
+    <input type="number" [value]="person.age">
+    <button [disabled]="disabled">Click me</button>
+  </p>
+  <hr />
+  <p>
+    <button (click)="clickHandler()">Click me</button>
+  </p>
+
+  <p>
+    <button (dblclick)="clickHandler()">Double me</button>
+  </p>
+
+  <p>(change)
+  </p>
+  <input type="number" [value]="person.age" (change)="changeHandler($event)">
+
+  <p>(Keydown)
+  </p>
+  <input type="text" [value]="person.name" (change)="changeHandler($event)">
+
+  <p>(Keydown)
+  </p>
+  <input type="text" [value]="person.name" (keydown)="keydownHandler($event)">
+
+  <p> Persona: {{ name() }} </p>
+  <p> Persona: {{ name() }} </p>
+  <p> Persona: {{ name() }} </p>
+  <p> Persona: {{ name() }} </p>
+  <p> Persona: {{ name() }} </p>
+  <p> Persona: {{ name() }} </p>
+
+</div>
