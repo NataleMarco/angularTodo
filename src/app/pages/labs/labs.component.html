@@ -12,7 +12,7 @@
   <p>la suma de 3 + 3 es {{3 + 3 }}</p>
   <p>My name is {{name()}} and i'm {{person.age}} years old</p>
   <hr />
-  <img [src]="person.avatar" alt="">
+  <!--<img [src]="person.avatar" alt=""> -->
   <p>
     <input type="number" [value]="person.age">
     <button [disabled]="disabled">Click me</button>
@@ -44,5 +44,20 @@
   <p> Persona: {{ name() }} </p>
   <p> Persona: {{ name() }} </p>
   <p> Persona: {{ name() }} </p>
+
+  <hr/>
+  <input type="color" [formControl]="colorCtrl" >
+  <p> color: {{ colorCtrl.value }}</p>
+
+  <hr/>
+  <p>
+    <input type="text" [formControl]="nameCtrl"> <br/>
+    <span class="message-error" [class.show]="nameCtrl.invalid">Nombre invalido</span>
+  </p>
+  <input type="text">
+
+  <section>
+    <li></li>
+  </section>
 
 </div>
